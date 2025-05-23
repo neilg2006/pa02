@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void prefixFinder(const map<string, double>& movies, string prefix) {
+string prefixFinder(const map<string, double>& movies, string prefix) {
 
     map<double, set<string>, greater<>> orderedMovies;
 
@@ -16,8 +16,7 @@ void prefixFinder(const map<string, double>& movies, string prefix) {
     }
 
     if (orderedMovies.empty()) {
-        cout << "No movies found with prefix " << prefix << endl;
-        return;
+        return "No movies found with prefix ";
     }
 
     for (const auto& [rating, titles] : orderedMovies) {
@@ -27,7 +26,5 @@ void prefixFinder(const map<string, double>& movies, string prefix) {
     }
 
     const auto& topMovie = *orderedMovies.begin()->second.begin();
-    double topMovieRating = orderedMovies.begin()->first;
-    cout << "Best movie with prefix " << prefix << " is: " << topMovie
-         << " with rating " << topMovieRating << endl;
+    return topMovie;
 }
