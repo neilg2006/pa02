@@ -42,7 +42,7 @@ int main(int argc, char** argv){
     while (getline (movieFile, line) && parseLine(line, movieName, movieRating)){
             // Use std::string movieName and double movieRating
             // to construct your Movie objects
-            cout << movieName << " has rating " << movieRating << endl;
+            //cout << movieName << " has rating " << movieRating << endl;
             movies[movieName] = movieRating;
     }
 
