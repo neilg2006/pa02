@@ -3,8 +3,6 @@
 #include <string>
 #include <map>
 
-void sort(const std::string& filename, std::map<std::string, double>& movies);
-
-void print(const std::map<std::string, double>& movies);
+string prefixFinder(const map<string, double>& movies, string prefix);
 
 #endif
