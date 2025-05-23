@@ -16,7 +16,7 @@ string prefixFinder(const map<string, double>& movies, string prefix) {
     }
 
     if (orderedMovies.empty()) {
-        return "No movies found with prefix ";
+        return " ";
     }
 
     for (const auto& [rating, titles] : orderedMovies) {
