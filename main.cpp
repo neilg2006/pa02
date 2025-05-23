@@ -74,7 +74,15 @@ int main(int argc, char** argv){
         topMovies.push_back(prefixFinder(movies, prefixes.at(i)));
     }
     for (int i = 0; i < topMovies.size(); i++) {
-        cout << "Best movie with prefix " << prefixes.at(i) << " is: " << topMovies.at(i) << " with rating " << std::fixed << std::setprecision(1) << movies[topMovies.at(i)] << endl;
+        if(topMovies.at(i) != "No movies found with prefix "){
+
+        cout << "Best movie with prefix " << prefixes.at(i) << " is: " 
+        << topMovies.at(i) << " with rating " << std::fixed << std::setprecision(1) 
+        << movies[topMovies.at(i)] << endl;
+        }
+        else{
+            cout << "No movies found with prefix " << prefixes.at(i)<< endl;
+        }
     }
 
     return 0;
