@@ -24,6 +24,7 @@ string prefixFinder(const map<string, double>& movies, string prefix) {
             cout << title << ", " << rating << endl;
         }
     }
+    cout << endl;
 
     const auto& topMovie = *orderedMovies.begin()->second.begin();
     return topMovie;
